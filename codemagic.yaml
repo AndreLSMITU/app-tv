@@ -1,3 +1,0 @@
-workflows:
-  build:
-    name: Build APK
