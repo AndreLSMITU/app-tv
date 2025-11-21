@@ -1,3 +1,25 @@
 workflows:
-  build:
-    name: Build APK
+  android-workflow:
+    name: Build Android APK
+    environment:
+      flutter: stable
+    scripts:
+      - name: Get dependencies
+        script: flutter pub get
+      - name: Build APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+
+  web-workflow:
+    name: Build Web App
+    environment:
+      flutter: stable
+    scripts:
+      - name: Get dependencies
+        script: flutter pub get
+      - name: Build Web
+        script: flutter build web
+    artifacts:
+      - build/web
+
