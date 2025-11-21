@@ -15,4 +15,6 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       home: LoginPage(),
     );
-}
+  }   // fecha o método build
+}     // fecha a classe MyApp
+
